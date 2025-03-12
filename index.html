@@ -42,7 +42,7 @@ fetch(apiUrl)
                 div.className = "song";
                 div.innerHTML = `
                     <h3>${song.title || "Title Not Available"}</h3>
-                    <p><strong>Artist:</strong> ${song.artist || "Artist Is Available"}</p>
+                    <p><strong>Artist:</strong> ${song.artist || "Artist Not Available"}</p>
                     <p><strong>Album:</strong> ${song.album || "Album Not Available"}</p>
                     <p><strong>Genre:</strong> ${song.genre || "Genre Not Available"}</p>
                 `;
