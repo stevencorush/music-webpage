@@ -41,10 +41,10 @@ fetch(apiUrl)
                 const div = document.createElement("div");
                 div.className = "song";
                 div.innerHTML = `
-                    <h3>${song.title ? song.title : "Title Not Available"}</h3>
-                    <p><strong>Artist:</strong> ${song.artist ? song.artist : "Artist Not Available"}</p>
-                    <p><strong>Album:</strong> ${song.album ? song.album : "Album Not Available"}</p>
-                    <p><strong>Genre:</strong> ${song.genre ? song.genre : "Genre Not Available"}</p>
+                    <h3>${song.title || "Title Not Available"}</h3>
+                    <p><strong>Artist:</strong> ${song.artist || "Artist Not Available"}</p>
+                    <p><strong>Album:</strong> ${song.album || "Album Not Available"}</p>
+                    <p><strong>Genre:</strong> ${song.genre || "Genre Not Available"}</p>
                 `;
                 musicDiv.appendChild(div);
             });
