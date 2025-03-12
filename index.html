@@ -35,16 +35,16 @@ fetch(apiUrl)
         const musicDiv = document.getElementById("music");
         
         if (Array.isArray(data) && data.length > 0) {
-            data.forEach(song => {
-                console.log("Song Object:", song); // Log each song object for detailed inspection
+            data.forEach(record => {
+                console.log("Record Object:", record); // Log each song object for detailed inspection
                 
                 const div = document.createElement("div");
                 div.className = "song";
                 div.innerHTML = `
-                    <h3>${song.title || "Title Not Available"}</h3>
-                    <p><strong>Artist:</strong> ${song.artist || "Artist Not Available"}</p>
-                    <p><strong>Album:</strong> ${song.album || "Album Not Available"}</p>
-                    <p><strong>Genre:</strong> ${song.genre || "Genre Not Available"}</p>
+                    <h3>${record.title || "Title Not Available"}</h3>
+                    <p><strong>Artist:</strong> ${record.artist || "Artist Not Available"}</p>
+                    <p><strong>Album:</strong> ${record.album || "Album Not Available"}</p>
+                    <p><strong>Genre:</strong> ${record.genre || "Genre Not Available"}</p>
                 `;
                 musicDiv.appendChild(div);
             });
